@@ -1,0 +1,10 @@
+version: 0.1
+
+phases:
+  install:
+    commands:
+      - printenv
+      - npm install
+  post_build:
+    commands:
+      - npm start
