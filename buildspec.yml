@@ -5,6 +5,9 @@ phases:
     commands:
       - printenv
       - npm install
+  build:
+    commands:
+      - npm run build    
   post_build:
     commands:
-      - npm start
+      - aws s3 sync --delete . "s3://sidecarfrontend.com"
