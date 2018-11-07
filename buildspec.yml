@@ -10,4 +10,4 @@ phases:
       - npm run build
   post_build:
     commands:
-      - aws s3 sync . "s3://sidecarfrontend.com" --exclude "node_modules/" 
+      - aws s3 sync . "s3://sidecarfrontend.com" --exclude "node_modules/*"
