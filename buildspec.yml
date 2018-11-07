@@ -7,7 +7,7 @@ phases:
       - npm install
   build:
     commands:
-      - npm run build    
+      - npm run build
   post_build:
     commands:
-      - aws s3 sync --delete . "s3://sidecarfrontend.com"
+      - aws s3 sync --delete . "s3://sidecarfrontend.com" --exclude "*" --include "build/"
